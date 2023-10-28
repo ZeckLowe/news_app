@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.8
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +18,15 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+  - family: Gellix
+    fonts:
+    - asset: fonts/Gellix-Regular.ttf
+      weight: 500
+    - asset: fonts/Gellix-Medium.ttf
+      weight: 600
+    - asset: fonts/Gellix-Bold.ttf
+      weight: 700
+  assets:
+  - assets/svg/arrow_back_icon.svg
+  - assets/svg/vector.svg
