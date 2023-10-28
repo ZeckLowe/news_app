@@ -28,5 +28,4 @@ flutter:
     - asset: fonts/Gellix-Bold.ttf
       weight: 700
   assets:
-  - assets/svg/arrow_back_icon.svg
-  - assets/svg/vector.svg
+  - assets/svg/
