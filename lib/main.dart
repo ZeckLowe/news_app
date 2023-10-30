@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/app_theme.dart';
+import 'package:news_app/assets/app_theme.dart';
 import 'package:news_app/screens/home_screen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +14,17 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Gellix'),
       home: const Scaffold(
