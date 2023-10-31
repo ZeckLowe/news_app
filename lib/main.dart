@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/assets/app_theme.dart';
 import 'package:news_app/screens/home_screen.dart';
+import 'package:news_app/screens/navigation_bar.dart';
+import 'package:news_app/screens/news_page_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,9 +29,13 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Gellix'),
-      home: const Scaffold(
-        backgroundColor: white,
-        body: const HomeScreen(),
+      home: Scaffold(
+        backgroundColor: lighterWhite,
+        body: const NewsPageScreen(),
+        bottomNavigationBar: BottomNavigation(
+          selectedIndex: _selectedIndex,
+          onItemTapped: _onItemTapped,
+        ),
       ),
     );
   }

@@ -18,13 +18,12 @@ class HomeScreen extends StatelessWidget {
               height: 49,
               width: 49,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(borderRadius),
-                  color: blue,
-                  image: const DecorationImage(
-                    image: NetworkImage(
-                      'https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png',
-                    ),
-                  )),
+                borderRadius: BorderRadius.circular(borderRadius),
+                color: blue,
+                image: const DecorationImage(
+                  image: AssetImage('assets/svg/user_vector.png'),
+                ),
+              ),
             ),
             const SizedBox(
               width: 16,
