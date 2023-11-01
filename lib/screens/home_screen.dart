@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/assets/app_theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news_app/screens/news_page_screen.dart';
+import 'package:news_app/screens/profile_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -295,101 +296,90 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => NewsPageScreen(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 164,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(borderRadius),
-                              image: const DecorationImage(
-                                image: AssetImage(
-                                    'assets/svg/hongkong.png'), // Use the first image
-                                fit: BoxFit.cover,
-                              ),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 164,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(borderRadius),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                  'assets/svg/hongkong.png'), // Use the first image
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          const SizedBox(
-                            height: 18,
-                          ),
-                          const Flexible(
-                            child: Text(
-                              'Hong Kong wins over Wall Street CEOs after lifting strict',
-                              style: TextStyle(
-                                fontFamily: 'Gellix',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15,
-                              ),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
+                        ),
+                        const SizedBox(
+                          height: 18,
+                        ),
+                        const Flexible(
+                          child: Text(
+                            'Hong Kong wins over Wall Street CEOs after lifting strict',
+                            style: TextStyle(
+                              fontFamily: 'Gellix',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
                             ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          const SizedBox(
-                            height: 16,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 19,
-                                    backgroundColor: blue,
-                                    backgroundImage: AssetImage(
-                                        'assets/svg/icon_avatar2.png'),
-                                  ),
-                                  SizedBox(
-                                    width: 12,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'Pan Bong',
-                                        style: TextStyle(
-                                          fontFamily: 'Gellix',
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                        ),
-                                      ),
-                                      Text(
-                                        'Jan 3, 2022',
-                                        style: TextStyle(
-                                          fontFamily: 'Gellix',
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 12,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              Container(
-                                height: 38,
-                                width: 38,
-                                padding: const EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.circular(borderRadius),
-                                  color: lightWhite,
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 19,
+                                  backgroundColor: blue,
+                                  backgroundImage:
+                                      AssetImage('assets/svg/icon_avatar2.png'),
                                 ),
-                                child: SvgPicture.asset(
-                                    'assets/svg/share_icon.svg'),
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Pan Bong',
+                                      style: TextStyle(
+                                        fontFamily: 'Gellix',
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Jan 3, 2022',
+                                      style: TextStyle(
+                                        fontFamily: 'Gellix',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Container(
+                              height: 38,
+                              width: 38,
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.circular(borderRadius),
+                                color: lightWhite,
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
+                              child:
+                                  SvgPicture.asset('assets/svg/share_icon.svg'),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -423,79 +413,90 @@ class HomeScreen extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  Container(
-                    padding: const EdgeInsets.all(9),
-                    margin: const EdgeInsets.only(right: 20),
-                    width: 208,
-                    height: 88,
-                    decoration: BoxDecoration(
-                      color: white,
-                      borderRadius: BorderRadius.circular(borderRadius),
-                      boxShadow: [
-                        BoxShadow(
-                          color: blue.withOpacity(0.051),
-                          offset: const Offset(0.0, 3.0),
-                          blurRadius: 24.0,
-                          spreadRadius: 0.0,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileScreen(),
                         ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 70,
-                          height: 70,
-                          padding: const EdgeInsets.all(26),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(borderRadius),
-                            image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage('assets/svg/top_trending.png'),
+                      );
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(9),
+                      margin: const EdgeInsets.only(right: 20),
+                      width: 208,
+                      height: 88,
+                      decoration: BoxDecoration(
+                        color: white,
+                        borderRadius: BorderRadius.circular(borderRadius),
+                        boxShadow: [
+                          BoxShadow(
+                            color: blue.withOpacity(0.051),
+                            offset: const Offset(0.0, 3.0),
+                            blurRadius: 24.0,
+                            spreadRadius: 0.0,
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            padding: const EdgeInsets.all(26),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(borderRadius),
+                              image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image:
+                                    AssetImage('assets/svg/top_trending.png'),
+                              ),
+                            ),
+                            child: SvgPicture.asset('assets/svg/play_icon.svg'),
+                          ),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          Flexible(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Top Trending Island in 2022',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontFamily: 'Gellix',
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 13,
+                                ),
+                                Row(
+                                  children: [
+                                    SvgPicture.asset('assets/svg/eye_icon.svg'),
+                                    const SizedBox(
+                                      width: 4,
+                                    ),
+                                    Text(
+                                      '40,999',
+                                      style: TextStyle(
+                                        fontFamily: 'Gellix',
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 12,
+                                        color: gray,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
-                          child: SvgPicture.asset('assets/svg/play_icon.svg'),
-                        ),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        Flexible(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Top Trending Island in 2022',
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontFamily: 'Gellix',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 13,
-                              ),
-                              Row(
-                                children: [
-                                  SvgPicture.asset('assets/svg/eye_icon.svg'),
-                                  const SizedBox(
-                                    width: 4,
-                                  ),
-                                  Text(
-                                    '40,999',
-                                    style: TextStyle(
-                                      fontFamily: 'Gellix',
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12,
-                                      color: gray,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   Container(

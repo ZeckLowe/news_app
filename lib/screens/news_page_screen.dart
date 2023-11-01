@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news_app/assets/app_theme.dart';
-import 'package:news_app/screens/home_screen.dart';
 
 class NewsPageScreen extends StatelessWidget {
   const NewsPageScreen({super.key});
