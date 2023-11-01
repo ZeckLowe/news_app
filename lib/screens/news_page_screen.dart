@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news_app/assets/app_theme.dart';
+import 'package:news_app/screens/home_screen.dart';
 
 class NewsPageScreen extends StatelessWidget {
   const NewsPageScreen({super.key});
@@ -56,8 +57,13 @@ class NewsPageScreen extends StatelessWidget {
                               border: Border.all(color: white),
                             ),
                             padding: const EdgeInsets.all(12),
-                            child: SvgPicture.asset(
-                                'assets/svg/arrow_back_icon.svg'),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: SvgPicture.asset(
+                                  'assets/svg/arrow_back_icon.svg'),
+                            ),
                           ),
                           Container(
                             height: 50,

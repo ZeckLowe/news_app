@@ -7,6 +7,7 @@ const Color black = Color(0xff19202D);
 const Color gray = Color(0xff9397A0);
 const Color lightGray = Color(0xffA7A7A7);
 const Color blue = Color(0xff5474FD);
+const Color lightBlue = Color(0xffC1D4F9);
 
 const Color borderColor = Color(0xffEEEEEE);
 const double borderRadius = 16.0;
